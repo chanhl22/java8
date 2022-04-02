@@ -1,4 +1,4 @@
-package functional_interface;
+package functional_interface_introduce;
 
 @FunctionalInterface
 public interface RunSomething {

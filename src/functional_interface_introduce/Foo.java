@@ -1,4 +1,4 @@
-package functional_interface;
+package functional_interface_introduce;
 
 public class Foo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package funcation;
+package basic_function;
 
 import java.util.function.Function;
 
