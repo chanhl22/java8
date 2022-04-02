@@ -1,3 +1,5 @@
+package functional_interface;
+
 public class Foo {
     public static void main(String[] args) {
 
