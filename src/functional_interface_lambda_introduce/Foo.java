@@ -1,4 +1,4 @@
-package functional_interface_introduce;
+package functional_interface_lambda_introduce;
 
 public class Foo {
     public static void main(String[] args) {
