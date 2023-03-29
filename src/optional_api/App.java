@@ -64,6 +64,7 @@ public class App {
          * Optional에 값이 있으면 가져오고 없는 경우에 ~~를 리턴하라.
          * orElse
          */
+        System.out.println("orElse start ------------");
         Optional<OnlineClass> optional4 = springClasses.stream()
                 .filter(oc -> oc.getTitle().startsWith("jpa"))
                 .findFirst();
@@ -77,11 +78,13 @@ public class App {
 
         OnlineClass onlineClass3 = optional5.orElse(createNewClasses());
         System.out.println(onlineClass3.getTitle());
+        System.out.println("orElse end ------------");
 
         /**
          * Optional에 값이 있으면 가져오고 없는 경우에 ~~를 하라.
          * orElseGet
          */
+        System.out.println("orElseGet start ------------");
         Optional<OnlineClass> optional6 = springClasses.stream()
                 .filter(oc -> oc.getTitle().startsWith("spring"))
                 .findFirst();
@@ -89,6 +92,7 @@ public class App {
         OnlineClass onlineClass4 = optional6.orElseGet(App::createNewClasses);
 //        OnlineClass onlineClass4 = optional6.orElseGet(() -> createNewClasses());
         System.out.println(onlineClass4.getTitle());
+        System.out.println("orElseGet end ------------");
 
         /**
          * Optional에 값이 있으면 가져오고 없는 경우 에러를 던져라.
