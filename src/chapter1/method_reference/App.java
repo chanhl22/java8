@@ -1,4 +1,4 @@
-package method_reference;
+package chapter1.method_reference;
 
 import java.util.Arrays;
 import java.util.function.Function;

@@ -1,4 +1,4 @@
-package functional_interface;
+package chapter1.functional_interface;
 
 import java.util.function.Function;
 

@@ -1,4 +1,4 @@
-package functional_interface_lambda_introduce;
+package chapter1.functional_interface_lambda_introduce;
 
 @FunctionalInterface
 public interface RunSomething {
