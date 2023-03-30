@@ -1,4 +1,4 @@
-package stream_api;
+package chapter3.stream_api;
 
 import java.util.ArrayList;
 import java.util.Collection;

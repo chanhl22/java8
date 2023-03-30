@@ -1,4 +1,4 @@
-package stream;
+package chapter3.stream;
 
 import java.util.ArrayList;
 import java.util.List;
