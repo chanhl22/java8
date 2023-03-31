@@ -1,4 +1,4 @@
-package optional;
+package chapter4.optional_api;
 
 import java.util.Optional;
 
@@ -46,13 +46,4 @@ public class OnlineClass {
         return Optional.ofNullable(progress);
     }
 
-    /**
-     * 안좋은 사용 방법
-     *
-     * public void setProgress(Optional<Progress> progress) {
-     *     if (progress != null) {
-     *         progress.ifPresent(p -> this.progress = p);
-     *     }
-     * }
-     */
 }
