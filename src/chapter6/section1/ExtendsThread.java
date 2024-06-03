@@ -1,4 +1,4 @@
-package concurrent_programming_introduce;
+package chapter6.section1;
 
 public class ExtendsThread {
     public static void main(String[] args) {
