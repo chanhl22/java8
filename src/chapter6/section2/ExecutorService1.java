@@ -1,10 +1,9 @@
-package executors;
+package chapter6.section2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ExecutorService1 {
-
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
@@ -21,6 +20,6 @@ public class ExecutorService1 {
 
         executorService.shutdown();
 //        executorService.shutdownNow();
-
     }
+
 }
