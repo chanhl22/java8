@@ -1,4 +1,4 @@
-package executors;
+package chapter6.section2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
