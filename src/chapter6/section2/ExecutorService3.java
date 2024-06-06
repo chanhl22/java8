@@ -1,4 +1,4 @@
-package executors;
+package chapter6.section2;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -16,4 +16,5 @@ public class ExecutorService3 {
     private static Runnable getRunnable(String message) {
         return () -> System.out.println(message + Thread.currentThread().getName());
     }
+
 }
