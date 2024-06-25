@@ -15,7 +15,13 @@ public class CompletableFutureAllOf {
             return "World";
         });
 
-        CompletableFuture<String> future = hello.thenCombine(world, (h, w) -> h + " " + w);
+
+        CompletableFuture<Void> future = CompletableFuture.allOf(hello, world)
+                .thenApply(result -> {
+                    System.out.println(result);
+                    return result;
+                });
+
         System.out.println(future.get());
     }
 
