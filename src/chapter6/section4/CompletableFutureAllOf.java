@@ -1,7 +1,9 @@
 package chapter6.section4;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 public class CompletableFutureAllOf {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -15,14 +17,17 @@ public class CompletableFutureAllOf {
             return "World";
         });
 
+        List<CompletableFuture<String>> futures = List.of(hello, world);
+        CompletableFuture[] futuresArray = futures.toArray(new CompletableFuture[futures.size()]);
 
-        CompletableFuture<Void> future = CompletableFuture.allOf(hello, world)
-                .thenApply(result -> {
-                    System.out.println(result);
-                    return result;
-                });
+        CompletableFuture<List<String>> results = CompletableFuture.allOf(futuresArray)
+                .thenApply(result ->
+                        futures.stream()
+                                .map(CompletableFuture::join)
+                                .collect(Collectors.toList())
+                );
 
-        System.out.println(future.get());
+        results.get().forEach(System.out::println);
     }
 
 }
